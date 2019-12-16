@@ -1,0 +1,54 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.entrada-blog a {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+    /* creamos las dos columnas usando flexbox */
+    .dos-columnas {
+        display: flex;
+        /* alinear los elementos horizontalmente */
+        justify-content: space-between;
+    }
+    /* agregar separación entre las columnas con flex, se tiene que aplicar a los hijos de la clase donde se aplica flex */
+    .entrada-blog {
+        /* flex-basis especifíca la base flexible, la cual es el tamaño inicial de un elemento flexible. Ésta propiedad determina el tamaño de una caja de contenidos a no ser que se haya especificado de otra forma usando box-sizing. */
+        /* a la base del 50% le quitamos 1 rem a cada columna */
+        flex-basis: calc(50% - 1rem);
+    }
+}

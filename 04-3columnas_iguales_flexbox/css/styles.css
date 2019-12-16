@@ -1,0 +1,56 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.entrada-blog a {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* tres columnas usando flexbox */
+
+@media (min-width: 768px) {
+    .tres-columnas {
+        display: flex;
+        justify-content: space-between;
+        /* si se agregan mas elementos hijos y se quiere que se muestre en columnas se agrega */
+        flex-wrap: wrap;
+        /* La propiedad flex-wrap de CSS especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. Si la cobertura (wrap) está permitida, esta propiedad también te permite controlar la dirección en la cual serán apilados los elementos */
+    }
+    /* le damos el ancho en los hijos */
+    .entrada-blog {
+        flex-basis: calc(33.3% - 1rem);
+    }
+}

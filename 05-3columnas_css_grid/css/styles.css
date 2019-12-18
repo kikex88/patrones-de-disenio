@@ -46,3 +46,18 @@ p {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+
+/* definimos tres columnas de distintos tamaño usando grid
+el grid se aplica al primer nivel de hijos, main y los dos aside*/
+
+@media (min-width: 768px) {
+    .contenedor-grid {
+        display: grid;
+        /* es equivalente a tener grid-template-columns: 60% 20% 20% */
+        /* tambien se pueden combinar pixeles con fracciones
+        grid-template-columns: 700px 1fr 1fr; */
+        grid-template-columns: 3fr repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}

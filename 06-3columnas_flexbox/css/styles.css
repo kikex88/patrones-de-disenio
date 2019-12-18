@@ -46,3 +46,22 @@ p {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+
+/* creando tres columnas de diferente tamaño usando flex */
+
+@media (min-width:768px) {
+    .contenedor-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    /* para darle medidas al tamaño de las columnas */
+    /* tamaño de 60% para el main */
+    .contenido-principal {
+        flex-basis: calc(60% - 1rem);
+    }
+    /* tamaño de 20% para cada aside */
+    .sidebar {
+        flex-basis: calc(20% - 1rem);
+    }
+}

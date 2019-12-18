@@ -46,3 +46,42 @@ p {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+
+/* haciendo un column-drop con flexbox */
+
+
+/* queremos dos columnas y una tercera que tome todo el ancho */
+
+@media (min-width: 480px) {
+    .column-drop-flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    /* definimos tamaños para los elementos que estan en cada columna el main y los dos aside*/
+    .contenido-principal,
+    .primera {
+        /* queremos que el contenido de estas clases tome la mitad del ancho */
+        flex-basis: calc(50% - 1rem);
+    }
+    /* por defecto el contenido del div de la clase segunda, toma todo el ancho disponible
+    es como que tuvieramos
+    .segunda{
+        flex-basis: 100%;
+     } */
+}
+
+
+/* queremos tres columnas */
+
+@media (min-width: 768px) {
+    /* las reglas de column-drop-flex se heredan */
+    .contenido-principal,
+    .primera,
+    .segunda {
+        /* flex-grow flex-shrink flex-basis*/
+        /* factor-de-crecimiento factor-de-encoger base */
+        flex: 0 0 calc(33.3% - 2rem);
+    }
+}

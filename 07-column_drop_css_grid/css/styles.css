@@ -46,3 +46,43 @@ p {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+
+/* haciendo un column-drop con grid */
+
+
+/* en este tamaño vamos a buscar tener dos columnas y una tercera columna que tome todo el ancho*/
+
+@media (min-width: 480px) {
+    .column-drop-grid {
+        display: grid;
+        /* para tener dos columnas */
+        grid-template-columns: repeat(2, 1fr);
+        /* separacion a los lados */
+        column-gap: 1rem;
+        /* separacion hacia abajo */
+        row-gap: 1rem;
+        /* se puede aplicar la separacion a los lados y hacia abajo cuando es igual usando solo gap: 1rem */
+    }
+    /* para que la tercera columna tome todo el ancho */
+    .segunda {
+        /* grid de la columna del primero hasta el tercer grid */
+        grid-column: 1 / 3;
+    }
+}
+
+
+/* en este tamaño queremos que haya tres columnas */
+
+@media (min-width: 768px) {
+    .column-drop-grid {
+        /* el display grid se heredad */
+        /* para tener tres columnas */
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* para posicionar el contenido de la clase segunda en la tercera columna */
+    .segunda {
+        /* va del tercer grid al cuarto grid */
+        grid-column: 3 / 4;
+    }
+}

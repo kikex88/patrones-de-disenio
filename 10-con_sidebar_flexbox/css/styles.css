@@ -46,3 +46,20 @@ p {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+@media (min-width: 768px) {
+    .con-sidebar {
+        display: flex;
+        justify-content: space-between;
+        /* primer metodo para cambiar el orden de los hijos */
+        flex-direction: row-reverse;
+    }
+    /* definimos el ancho en los hijos */
+    article {
+        flex: 0 0 calc(66.7% - 2rem);
+    }
+    aside {
+        flex: 0 0 calc(33.3% - 2rem);
+        /* segundo metodo para cambiar el orden de los hijos, es poner en el hijo que se quiere cambiar de posición order: -1 con esto se le asigna el valor de -1 al aside, dejando a article con el valor de 1 */
+    }
+}

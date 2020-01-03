@@ -23,6 +23,18 @@ h1 {
     font-size: 4rem;
 }
 
+
+/* El patrón Tiny tweaks permite realizar pequeños cambios en el diseño, como ajustar el tamaño de la fuente, cambiar el tamaño de las imágenes o desplazar el contenido de maneras muy poco significativas.
+
+Funciona correctamente en diseños con una sola columna, como los sitios web lineales de una sola página y los artículos con mucho texto. */
+
+@media (min-width: 992px) {
+    h1 {
+        font-size: 6rem;
+        text-align: center;
+    }
+}
+
 h2 {
     font-size: 3.2rem;
 }

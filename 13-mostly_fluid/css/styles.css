@@ -31,12 +31,6 @@ p {
     font-size: 2rem;
 }
 
-.contenedor {
-    max-width: 1200px;
-    width: 95%;
-    margin: 0 auto;
-}
-
 .entrada-blog a {
     display: inline-block;
     background-color: #2196F3;
@@ -45,4 +39,25 @@ p {
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+
+/* El patrón Mostly fluid consiste, principalmente, en una cuadrícula fluida. Por lo general, en las pantallas grandes o medianas se mantiene el mismo tamaño y simplemente se ajustan los márgenes en las más anchas */
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    .contenedor {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+        width: 90%;
+    }
 }
